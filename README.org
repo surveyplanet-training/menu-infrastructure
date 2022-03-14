@@ -1,0 +1,44 @@
+#+TITLE: Automate
+#+begin_src bash
+terraform apply -var-file=vars.tfvars -auto-approve
+
+aws eks --region eu-central-1 update-kubeconfig --name menu-test --profile spadmin
+#+end_src
+*   Argocd
+**  setup
+*** install
+#+begin_src bash
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+#+end_src
+*** port forward
+#+begin_src bash
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+#+end_src
+*** Get admin pass
+#+begin_src bash
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+#+end_src
+*** Login and change pass
+#+begin_src bash
+argocd login localhost:8080
+argocd account update-password
+#+end_src
+**  create menu namespace
+#+begin_src bash
+kubectl create namespace menu
+#+end_src
+**  apply secrets
+#+begin_src bash
+kubectl apply -f secrets/
+#+end_src
+
+**  apply menu app manifests
+#+begin_src bash
+kubectl apply -f manifests/kubernetes-infrastructure/argocd/
+#+end_src
+
+**  sync menu
+#+begin_src bash
+argocd app sync menu
+#+end_src
