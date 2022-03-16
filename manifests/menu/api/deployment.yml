@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: menu-api-deployment
+  name: menu-api
+  namespace: menu
   labels:
     app: menu-api
 spec:
@@ -20,12 +21,12 @@ spec:
         - name: menu-api
           image: lukamit/menu-api-development:0.1.0-prerelease47
           ports:
-            - containerPort: 9000
+            - containerPort: 9001
           env:
             - name: LOCAL_ENV
               value: development
             - name: PORT
-              value: "9000"
+              value: "9001"
             - name: NODE_ENV
               value: development
             - name: MONGO

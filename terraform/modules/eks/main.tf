@@ -50,7 +50,7 @@ module "eks" {
   # }]
 
   vpc_id     = var.vpc.vpc_id
-  subnet_ids = split(", ", "${join(", ", var.vpc.private_subnets)}, ${join(", ", var.vpc.public_subnets)}")
+  subnet_ids = split(", ", "${join(", ", var.vpc.private_subnets)}")
   eks_managed_node_group_defaults = {
     ami_type               = "AL2_x86_64"
     disk_size              = 50

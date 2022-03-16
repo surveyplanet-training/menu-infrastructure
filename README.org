@@ -4,6 +4,46 @@ terraform apply -var-file=vars.tfvars -auto-approve
 
 aws eks --region eu-central-1 update-kubeconfig --name menu-test --profile spadmin
 #+end_src
+*   Create namespaces
+**  create traefik namespace
+#+begin_src bash
+kubectl create namespace traefik
+#+end_src
+**  create argocd namespace
+#+begin_src bash
+kubectl create namespace argocd
+#+end_src
+**  create menu namespace
+#+begin_src bash
+kubectl create namespace menu
+#+end_src
+*   Apply secrets
+#+begin_src bash
+kubectl apply -f secrets/
+#+end_src
+*   Traefik
+** install through helm
+***   add traefik chart
+#+begin_src bash
+helm repo add traefik https://helm.traefik.io/traefik
+#+end_src
+***   update chart repository
+#+begin_src bash
+helm repo update
+#+end_src
+***   install traefk
+#+begin_src
+helm install traefik traefik/traefik --values=manifests/kubernetes-infrastructure/traefik/values.yml -n traefik
+#+end_src
+***   TODO point CNAME to traefik load balancer EXTERNAL-IP
+https://api.cloudflare.com/#dns-records-for-a-zone-patch-dns-record
+#+begin_src bash
+curl -X PATCH "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a8372d0c353/dns_records/372e67954025e0ba6aaa6d586b9e0b59" \
+     -H "X-Auth-Email: user@example.com" \
+     -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"example.com","content":"127.0.0.1","ttl":3600,"proxied":false}'
+#+end_src
 *   Argocd
 **  setup
 *** install
@@ -24,20 +64,10 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 argocd login localhost:8080
 argocd account update-password
 #+end_src
-**  create menu namespace
-#+begin_src bash
-kubectl create namespace menu
-#+end_src
-**  apply secrets
-#+begin_src bash
-kubectl apply -f secrets/
-#+end_src
-
 **  apply menu app manifests
 #+begin_src bash
 kubectl apply -f manifests/kubernetes-infrastructure/argocd/
 #+end_src
-
 **  sync menu
 #+begin_src bash
 argocd app sync menu

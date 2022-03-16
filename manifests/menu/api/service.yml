@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: menu-api-load-balancer
+  name: menu-api
+  namespace: menu
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: menu-api
   ports:
-    - port: 9000
-      targetPort: 9000
+    - port: 9001
+      targetPort: 9001
