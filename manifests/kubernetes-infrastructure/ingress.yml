@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: menu
+  namespace: menu
+  annotations:
+
+spec:
+  rules:
+    - host: "api.labitup.one"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: menu-api
+                port:
+                  number: 9001
