@@ -38,7 +38,7 @@ helm repo update
 #+end_src
 ***   install traefk
 #+begin_src bash
-helm install traefik traefik/traefik --values=manifests/kubernetes-infrastructure/traefik/values.yml -n traefik
+helm install traefik traefik/traefik --values=helm/traefik/values.yml -n traefik
 #+end_src
 ***   TODO point CNAME to traefik load balancer EXTERNAL-IP :tangle no
 https://api.cloudflare.com/#dns-records-for-a-zone-patch-dns-record
@@ -78,4 +78,19 @@ kubectl apply -f manifests/kubernetes-infrastructure/argocd/
 ***  apply menu ingress
 #+begin_src bash
 kubectl apply -f manifests/menu/api/ingress.yml
+#+end_src
+
+*   Monitoring
+**   Grafana
+#+begin_src bash
+kubectl apply -f manifests/kubernetes-infrastructure/grafana/deployment.yml
+#+end_src
+**  Prometheus
+manifest for a docker image might be a better way to deploy
+*** helm
+#+begin_src bash
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add stable https://charts.helm.sh/stable
+helm repo update
+helm install prometheus prometheus-community/prometheus
 #+end_src

@@ -1,3 +1,11 @@
+additionalArguments:
+  # DNS Challenge
+  - --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
+  - --certificatesresolvers.cloudflare.acme.email=luka.markovic.it@gmail.com
+  - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
+  - --certificatesresolvers.cloudflare.acme.storage=/ssl-certs/acme-cloudflare.json
+
+  - "--metrics.prometheus=true"
 # Default values for Traefik
 image:
   name: traefik
@@ -215,8 +223,8 @@ metrics:
   # influxdb:
   #   address: localhost:8089
   #   protocol: udp
-  prometheus:
-    entryPoint: metrics
+  # prometheus:
+  #   entryPoint: metrics
   #  addRoutersLabels: true
   # statsd:
   #   address: localhost:8125
@@ -339,7 +347,7 @@ ports:
       #     - foo.example.com
       #     - bar.example.com
   metrics:
-    port: 9100
+    port: 9101
     # hostPort: 9100
     # Defines whether the port is exposed if service.type is LoadBalancer or
     # NodePort.
@@ -423,13 +431,6 @@ autoscaling:
 # additionalArguments:
 # - "--certificatesresolvers.le.acme.storage=/data/acme.json"
 # It will persist TLS certificates.
-
-additionalArguments:
-  # DNS Challenge
-  - --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
-  - --certificatesresolvers.cloudflare.acme.email=luka.markovic.it@gmail.com
-  - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
-  - --certificatesresolvers.cloudflare.acme.storage=/ssl-certs/acme-cloudflare.json
 
 persistence:
   # enabled: false
