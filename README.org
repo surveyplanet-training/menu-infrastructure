@@ -1,6 +1,11 @@
-#+TITLE: Automate
+#+TITLE: k8s cluster provision and setup
+#+PROPERTY: header-args :tangle "setup.sh"
+
+*   Terraform and update kubeconfig
 #+begin_src bash
+cd terraform
 terraform apply -var-file=vars.tfvars -auto-approve
+cd ..
 
 aws eks --region eu-central-1 update-kubeconfig --name menu-test --profile spadmin
 #+end_src
@@ -32,12 +37,12 @@ helm repo add traefik https://helm.traefik.io/traefik
 helm repo update
 #+end_src
 ***   install traefk
-#+begin_src
+#+begin_src bash
 helm install traefik traefik/traefik --values=manifests/kubernetes-infrastructure/traefik/values.yml -n traefik
 #+end_src
-***   TODO point CNAME to traefik load balancer EXTERNAL-IP
+***   TODO point CNAME to traefik load balancer EXTERNAL-IP :tangle no
 https://api.cloudflare.com/#dns-records-for-a-zone-patch-dns-record
-#+begin_src bash
+#+begin_src
 curl -X PATCH "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a8372d0c353/dns_records/372e67954025e0ba6aaa6d586b9e0b59" \
      -H "X-Auth-Email: user@example.com" \
      -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" \
@@ -51,24 +56,26 @@ curl -X PATCH "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 #+end_src
-*** port forward
-#+begin_src bash
+*** port forward :tangle no
+#+begin_src
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 #+end_src
-*** Get admin pass
-#+begin_src bash
+*** Get admin pass :tangle no
+#+begin_src
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 #+end_src
-*** Login and change pass
-#+begin_src bash
+*** Login and change pass :tangle no
+#+begin_src
 argocd login localhost:8080
 argocd account update-password
 #+end_src
-**  apply menu app manifests
+*   Menu
+**   API
+***  apply menu app manifests
 #+begin_src bash
 kubectl apply -f manifests/kubernetes-infrastructure/argocd/
 #+end_src
-**  sync menu
+***  apply menu ingress
 #+begin_src bash
-argocd app sync menu
+kubectl apply -f manifests/menu/api/ingress.yml
 #+end_src
