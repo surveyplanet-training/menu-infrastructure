@@ -38,7 +38,13 @@ spec:
             httpGet:
               path: /liveness
               port: 9001
+              httpHeaders:
+                - name: live
+                  value: 1
           readinessProbe:
             httpGet:
               path: /readiness
               port: 9001
+              httpHeaders:
+                - name: ready
+                  value: 1
