@@ -34,3 +34,11 @@ spec:
                 secretKeyRef:
                   name: api-mongo
                   key: mongo
+          livenessProbe:
+            httpGet:
+              path: /liveness
+              port: 9001
+          readinessProbe:
+            httpGet:
+              path: /readiness
+              port: 9001
