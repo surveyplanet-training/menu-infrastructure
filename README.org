@@ -53,7 +53,6 @@ curl -X PATCH "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a
 **  setup
 *** install
 #+begin_src bash
-kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 #+end_src
 *** port forward :tangle no
@@ -81,16 +80,16 @@ kubectl apply -f manifests/menu/api/ingress.yml
 #+end_src
 
 *   Monitoring
-**   Grafana
-#+begin_src bash
-kubectl apply -f manifests/kubernetes-infrastructure/grafana/deployment.yml
-#+end_src
-**  Prometheus
-manifest for a docker image might be a better way to deploy
-*** helm
+**  Prometheus Kube Stack
+manifest for docker images might be a better way to deploy
 #+begin_src bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo add stable https://charts.helm.sh/stable
 helm repo update
-helm install prometheus prometheus-community/prometheus
+helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --values=helm/kube-prometheus-stack/values.yml -n monitoring
+#+end_src
+**  Loki and Promtail
+#+begin_src bash
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+helm upgrade --install loki grafana/loki-stack -n monitoring
 #+end_src
