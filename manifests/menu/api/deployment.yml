@@ -19,7 +19,7 @@ spec:
         - name: regcred
       containers:
         - name: menu-api
-          image: lukamit/menu-api-development:0.1.0-prerelease88
+          image: lukamit/menu-api-development:0.1.0-prerelease89
           ports:
             - containerPort: 9001
           env:
