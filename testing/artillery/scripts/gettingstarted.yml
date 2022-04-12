@@ -1,0 +1,28 @@
+config:
+  target: "https://api.labitup.one"
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 50
+      name: Ramp up load
+    - duration: 600
+      arrivalRate: 50
+      name: Sustained load
+  timeout: 1000
+
+scenarios:
+  # - name: "hit_index"
+  #   flow:
+  #     - get:
+  #         url: "/"
+  - name: "hit_all_menus"
+    flow:
+      - get:
+          url: "/v1/menus"
+  - name: "hit_a_specific_menu"
+    flow:
+      - get:
+          url: "/v1/menu/61e1d2ba2c710d55e31603a4"

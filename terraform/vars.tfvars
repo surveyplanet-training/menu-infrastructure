@@ -1,5 +1,5 @@
 namespace   = "menu-test"
-region      = "eu-central-1"
+region      = "us-west-2"
 profile     = "spadmin"
 environment = "dev"
 tags = {

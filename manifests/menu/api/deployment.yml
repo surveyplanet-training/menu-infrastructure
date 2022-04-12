@@ -38,13 +38,14 @@ spec:
             httpGet:
               path: /liveness
               port: 9001
-              # httpHeaders:
-              #   - name: live
-              #     value: "1"
+            initialDelaySeconds: 6
+            periodSeconds: 10
+            failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /readiness
               port: 9001
-              # httpHeaders:
-              #   - name: ready
-              #     value: "1"
+            initialDelaySeconds: 6
+            periodSeconds: 10
+            timeoutSeconds: 8
+            failureThreshold: 3

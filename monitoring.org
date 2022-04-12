@@ -1,0 +1,16 @@
+#+title: Monitoring
+* Alerts
+service down
+error responses
+cluster resources used staying over a threshold for a certain amount of time
+response time over a theshold for a certain amount of time
+* Monitoring
+** api
+requests/s
+total requests
+average response time
+pods used/cluster
+** cluster resources
+resources/namespace
+resources/cluster||nodegroup
+resources overall

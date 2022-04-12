@@ -22,6 +22,10 @@ kubectl create namespace argocd
 #+begin_src bash
 kubectl create namespace menu
 #+end_src
+**  create monitoring namespace
+#+begin_src bash
+kubectl create namespace monitoring
+#+end_src
 *   Apply secrets
 #+begin_src bash
 kubectl apply -f secrets/
@@ -80,16 +84,34 @@ kubectl apply -f manifests/menu/api/ingress.yml
 #+end_src
 
 *   Monitoring
-**  Prometheus Kube Stack
+**  Prometheus Kube Stack :tangle no
 manifest for docker images might be a better way to deploy
 #+begin_src bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --values=helm/kube-prometheus-stack/values.yml -n monitoring
 #+end_src
-**  Loki and Promtail
+**  Loki and Promtail :tangle no
 #+begin_src bash
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 helm upgrade --install loki grafana/loki-stack -n monitoring
+#+end_src
+
+**  kube-state-metrics
+#+begin_src bash
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm repo update && helm install ksm prometheus-community/kube-state-metrics --set image.tag=v2.2.0 --namespace monitoring
+#+end_src
+**  Grafana Agent
+**** install
+#+begin_src bash
+MANIFEST_URL=https://raw.githubusercontent.com/grafana/agent/v0.23.0/production/kubernetes/agent-bare.yaml NAMESPACE=monitoring /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/grafana/agent/release/production/kubernetes/install-bare.sh)" | kubectl apply -f -
+#+end_src
+**** apply logs agent
+#+begin_src bash
+kubectl apply -f manifest/kubernetes-manifests/grafana-agent
+#+end_src
+**** rollout restart
+#+begin_src bash
+kubectl rollout restart deployment/grafana-agent -n monitoring
 #+end_src
