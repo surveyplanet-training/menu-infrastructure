@@ -5,9 +5,11 @@ metadata:
   namespace: menu
 spec:
   # type: ClusterIP
-  type: LoadBalancer
+  # type: LoadBalancer
+  type: NodePort
   selector:
     app: menu-api
   ports:
     - port: 80
       targetPort: 9001
+      protocol: TCP

@@ -4,7 +4,7 @@
 *   Terraform and update kubeconfig
 #+begin_src bash
 cd terraform
-terraform apply -var-file=vars.tfvars -auto-approve
+terraform apply -var-file=vars.tfvars --auto-approve
 cd ..
 
 aws eks --region eu-central-1 update-kubeconfig --name menu-test --profile spadmin
@@ -52,6 +52,35 @@ curl -X PATCH "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a
      -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" \
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"example.com","content":"127.0.0.1","ttl":3600,"proxied":false}'
+#+end_src
+*   ALB
+**  IAM
+#+begin_src bash
+eksctl utils associate-iam-oidc-provider --region=us-west-2 --cluster=menu-test --profile spadmin --approve
+
+curl -o iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.4.1/docs/install/iam_policy.json
+
+aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy \
+    --policy-document file://iam-policy.json \
+    --profile spadmin
+
+eksctl create iamserviceaccount \
+--cluster=menu-test \
+--namespace=kube-system \
+--name=aws-load-balancer-controller \
+--attach-policy-arn=arn:aws:iam::295604779664:policy/AWSLoadBalancerControllerIAMPolicy \
+--override-existing-serviceaccounts \
+--region us-west-2 \
+--profile spadmin \
+--approve
+#+end_src
+TODO: rest of steps from https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/deploy/installation/
+**  aws-load-balancer-controller
+#+begin_src bash
+helm repo add eks https://aws.github.io/eks-charts
+
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=menu-test
 #+end_src
 *   Argocd
 **  setup
@@ -109,7 +138,7 @@ MANIFEST_URL=https://raw.githubusercontent.com/grafana/agent/v0.23.0/production/
 #+end_src
 **** apply logs agent
 #+begin_src bash
-kubectl apply -f manifest/kubernetes-manifests/grafana-agent
+kubectl apply -f manifests/kubernetes-infrastructure/grafana-agent/
 #+end_src
 **** rollout restart
 #+begin_src bash

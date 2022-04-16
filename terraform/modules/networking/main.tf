@@ -45,7 +45,9 @@ module "vpc" {
     Namespace = "${var.namespace}-vpc"
   }
   public_subnet_tags = {
-    Namespace = "${var.namespace}-public-subnet"
+    Namespace                = "${var.namespace}-public-subnet"
+    "kubernetes.io/role/elb" = "1"
+
   }
   private_subnet_tags = {
     Namespace = "${var.namespace}-private-subnet"

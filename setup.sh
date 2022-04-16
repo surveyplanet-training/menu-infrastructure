@@ -2,7 +2,7 @@ cd terraform
 terraform apply -var-file=vars.tfvars -auto-approve
 cd ..
 
-aws eks --region us-west-2 update-kubeconfig --name menu-test --profile spadmin
+aws eks --region eu-central-1 update-kubeconfig --name menu-test --profile spadmin
 
 kubectl create namespace traefik
 
@@ -20,19 +20,15 @@ helm repo update
 
 helm install traefik traefik/traefik --values=helm/traefik/values.yml -n traefik
 
+helm repo add eks https://aws.github.io/eks-charts
+kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller//crds?ref=master"
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=menu-api
+
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 kubectl apply -f manifests/kubernetes-infrastructure/argocd/
 
 kubectl apply -f manifests/menu/api/ingress.yml
-
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo update
-helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --values=helm/kube-prometheus-stack/values.yml -n monitoring
-
-helm repo add grafana https://grafana.github.io/helm-charts
-helm repo update
-helm upgrade --install loki grafana/loki-stack -n monitoring
 
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm repo update && helm install ksm prometheus-community/kube-state-metrics --set image.tag=v2.2.0 --namespace monitoring
 
