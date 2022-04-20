@@ -17,3 +17,7 @@ module "acm" {
   cf_email   = var.cf_email
   cf_api_key = var.cf_api_key
 }
+
+output "acm" {
+  value = module.acm
+}
