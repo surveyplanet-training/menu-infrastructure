@@ -10,3 +10,10 @@ module "eks" {
   vpc       = module.networking.vpc
   tags      = var.tags
 }
+
+module "acm" {
+  source     = "./modules/acm"
+  domain     = var.domain
+  cf_email   = var.cf_email
+  cf_api_key = var.cf_api_key
+}
