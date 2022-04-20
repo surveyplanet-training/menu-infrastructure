@@ -1,12 +1,21 @@
 #+TITLE: k8s cluster provision and setup
 #+PROPERTY: header-args :tangle "setup.sh"
 
-*   Terraform and update kubeconfig
+*   Terraform
+** apply
 #+begin_src bash
 cd terraform
 terraform apply -var-file=vars.tfvars --auto-approve
+#+end_src
+**  export acm_certificate_arn
+#+begin_src bash
+export acm_certificate_arn=$(terraform output -json | jq 'map(.value.acm_certificate_arn) | sort[]')
+#+end_src
+#+begin_src bash
 cd ..
-
+#+end_src
+*   update kubeconfig
+#+begin_src bash
 aws eks --region eu-central-1 update-kubeconfig --name menu-test --profile spadmin
 #+end_src
 *   Create namespaces
@@ -120,6 +129,10 @@ argocd account update-password
 ***  apply menu app manifests
 #+begin_src bash
 kubectl apply -f manifests/kubernetes-infrastructure/argocd/
+#+end_src
+***  update ingress with acm_certificate_arn
+#+begin_src bash
+yq e -i '.metadata.annotations."alb.ingress.kubernetes.io/certificate-arn" = env(acm_certificate_arn)' manifests/menu/api/ingress.yml
 #+end_src
 ***  apply menu ingress
 #+begin_src bash
