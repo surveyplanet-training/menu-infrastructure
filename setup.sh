@@ -1,8 +1,11 @@
 cd terraform
 terraform apply -var-file=vars.tfvars --auto-approve
+
+export acm_certificate_arn=$(terraform output -json | jq 'map(.value.acm_certificate_arn) | sort[]')
+
 cd ..
 
-aws eks --region eu-central-1 update-kubeconfig --name menu-test --profile spadmin
+aws eks --region us-west-2 update-kubeconfig --name menu-test --profile spadmin
 
 kubectl create namespace traefik
 
@@ -26,8 +29,8 @@ helm repo add eks https://aws.github.io/eks-charts
 
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=menu-test
 
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl apply -f manifests/kubernetes-infrastructure/externalDNS/
 
-kubectl apply -f manifests/kubernetes-infrastructure/argocd/
+yq e -i '.metadata.annotations."alb.ingress.kubernetes.io/certificate-arn" = env(acm_certificate_arn)' manifests/menu/api/ingress.yml
 
-kubectl apply -f manifests/menu/api/ingress.yml
+kubectl apply -f manifests/menu/api/

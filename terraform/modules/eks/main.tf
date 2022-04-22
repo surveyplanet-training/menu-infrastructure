@@ -51,7 +51,7 @@ module "eks" {
   source = "terraform-aws-modules/eks/aws"
 
   cluster_name                    = var.namespace
-  cluster_version                 = "1.21"
+  cluster_version                 = "1.22"
   cluster_endpoint_private_access = true
   cluster_endpoint_public_access  = true
 
@@ -105,6 +105,7 @@ module "eks" {
       #   ExtraTag = "example"
       # }
     },
+
     # second = {
     #   instance_types = ["t3.medium"]
     #   min_size       = 2
@@ -339,6 +340,7 @@ resource "aws_iam_policy" "node_group_policy" {
     }
   )
 }
+
 resource "aws_iam_role_policy_attachment" "node-group-attach" {
   role       = module.eks.eks_managed_node_groups.first.iam_role_name
   policy_arn = resource.aws_iam_policy.node_group_policy.arn

@@ -38,7 +38,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
     alb.ingress.kubernetes.io/ssl-redirect: "443"
-    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-west-2:295604779664:certificate/5b7221e5-1b49-4de8-a800-384982f1ec1f"
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-west-2:295604779664:certificate/e6299b74-542b-4627-bcf0-77b790ac51bb"
     # alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-west-2:573971801166:regional/webacl/sp-waf-staging/af2be756-da78-4668-afef-969b2bf48d8b
     # alb.ingress.kubernetes.io/load-balancer-attributes: >
     #  access_logs.s3.enabled=true,
