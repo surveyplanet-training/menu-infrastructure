@@ -2,3 +2,4 @@ argocd-repositories.yml
 secrets
 .terraform*
 *tfstate*
+.log*

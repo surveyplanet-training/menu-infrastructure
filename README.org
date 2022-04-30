@@ -17,13 +17,9 @@ cd ..
 #+end_src
 *   update kubeconfig
 #+begin_src bash
-aws eks --region eu-central-1 update-kubeconfig --name menu-test --profile spadmin
+aws eks --region us-west-2 update-kubeconfig --name menu-test --profile spadmin
 #+end_src
 *   Create namespaces
-**  create traefik namespace :tangle no
-#+begin_src bash
-kubectl create namespace traefik
-#+end_src
 **  create argocd namespace
 #+begin_src bash
 kubectl create namespace argocd
@@ -41,20 +37,6 @@ kubectl create namespace monitoring
 kubectl apply -f secrets/
 #+end_src
 *   Monitoring
-**  Prometheus Kube Stack :tangle no
-manifest for docker images might be a better way to deploy
-#+begin_src bash :tangle no
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo update
-helm install kube-prometheus-stack prometheus-community/kube-prometheus-stack --values=helm/kube-prometheus-stack/values.yml -n monitoring
-#+end_src
-**  Loki and Promtail :tangle no
-#+begin_src bash :tangle no
-helm repo add grafana https://grafana.github.io/helm-charts
-helm repo update
-helm upgrade --install loki grafana/loki-stack -n monitoring
-#+end_src
-
 **  kube-state-metrics
 #+begin_src bash
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts && helm repo update && helm install ksm prometheus-community/kube-state-metrics --set image.tag=v2.2.0 --namespace monitoring
@@ -72,37 +54,15 @@ kubectl apply -f manifests/kubernetes-infrastructure/grafana-agent/
 #+begin_src bash
 kubectl rollout restart deployment/grafana-agent -n monitoring
 #+end_src
-*   Traefik
-** install through helm
-***   add traefik chart :tangle no
-#+begin_src bash :tangle no
-helm repo add traefik https://helm.traefik.io/traefik
-#+end_src
-***   update chart repository :tangle no
-#+begin_src bash :tangle no
-helm repo update
-#+end_src
-***   install traefk :tangle no
-#+begin_src bash :tangle no
-helm install traefik traefik/traefik --values=helm/traefik/values.yml -n traefik
-#+end_src
-***   TODO point CNAME to traefik load balancer EXTERNAL-IP :tangle no
-https://api.cloudflare.com/#dns-records-for-a-zone-patch-dns-record
-#+begin_src bash :tangle no
-curl -X PATCH "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a8372d0c353/dns_records/372e67954025e0ba6aaa6d586b9e0b59" \
-     -H "X-Auth-Email: user@example.com" \
-     -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" \
-     -H "Content-Type: application/json" \
-     --data '{"type":"A","name":"example.com","content":"127.0.0.1","ttl":3600,"proxied":false}'
-#+end_src
-*   ALB
-**  aws-load-balancer-controller
+*   Networking
+**   ALB
+***  aws-load-balancer-controller
 #+begin_src bash
 helm repo add eks https://aws.github.io/eks-charts
 
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=menu-test
 #+end_src
-*   external DNS
+**   external DNS
 #+begin_src bash
 kubectl apply -f manifests/kubernetes-infrastructure/externalDNS/
 #+end_src

@@ -1,0 +1,3891 @@
+{
+  "total_active_series": 11004,
+  "in_use_active_series": 3522,
+  "additional_active_series": 7482,
+  "in_use_metric_counts": [
+    {
+      "metric": "rest_client_request_duration_seconds_bucket",
+      "count": 869,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 869
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_runtime_operations_duration_seconds_bucket",
+      "count": 705,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 705
+        }
+      ]
+    },
+    {
+      "metric": "storage_operation_duration_seconds_bucket",
+      "count": 476,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 476
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_cgroup_manager_duration_seconds_bucket",
+      "count": 96,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 96
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_worker_duration_seconds_bucket",
+      "count": 96,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 96
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_writes_total",
+      "count": 86,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 86
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_reads_total",
+      "count": 86,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 86
+        }
+      ]
+    },
+    {
+      "metric": "container_network_transmit_packets_total",
+      "count": 75,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "metric": "container_network_transmit_packets_dropped_total",
+      "count": 75,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "metric": "container_network_receive_packets_dropped_total",
+      "count": 75,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "metric": "container_network_receive_packets_total",
+      "count": 75,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "metric": "container_network_transmit_bytes_total",
+      "count": 75,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "metric": "container_network_receive_bytes_total",
+      "count": 75,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_rss",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_working_set_bytes",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_runtime_operations_total",
+      "count": 47,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 47
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_writes_bytes_total",
+      "count": 38,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 38
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_reads_bytes_total",
+      "count": 38,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 38
+        }
+      ]
+    },
+    {
+      "metric": "node_namespace_pod_container:container_memory_rss",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pleg_relist_duration_seconds_bucket",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pleg_relist_interval_seconds_bucket",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "storage_operation_duration_seconds_count",
+      "count": 34,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 34
+        }
+      ]
+    },
+    {
+      "metric": "volume_manager_total_volumes",
+      "count": 24,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "metric": "kube_node_status_allocatable",
+      "count": 21,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "metric": "namespace_workload_pod:kube_pod_owner:relabel",
+      "count": 19,
+      "job_counts": [
+        {
+          "job": "",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_owner",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_requests_total",
+      "count": 17,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_resource_requests",
+      "count": 10,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_worker_duration_seconds_count",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_namespace_created",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_cgroup_manager_duration_seconds_count",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_heap_space_size_used_bytes",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "up",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_running_containers",
+      "count": 7,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "metric": "process_resident_memory_bytes",
+      "count": 4,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "process_cpu_seconds_total",
+      "count": 4,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "process_start_time_seconds",
+      "count": 4,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "go_goroutines",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "machine_memory_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pleg_relist_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_start_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_running_pods",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_runtime_operations_errors_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_gc_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_node_name",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_gc_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_resource_limits",
+      "count": 2,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "metric": "storage_operation_errors_total",
+      "count": 2,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "metric": "namespace_cpu:kube_pod_container_resource_requests:sum",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_active_requests_total",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_active_handles_total",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "namespace_memory:kube_pod_container_resource_limits:sum",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_eventloop_lag_p50_seconds",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_eventloop_lag_p99_seconds",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_heap_size_used_bytes",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "process_cpu_system_seconds_total",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "process_cpu_user_seconds_total",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_version_info",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_eventloop_lag_seconds",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "namespace_memory:kube_pod_container_resource_requests:sum",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_external_memory_bytes",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_heap_size_total_bytes",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "grafanacloud_traces_instance_discarded_spans_total:rate5m",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_traces_instance_bytes_received_per_second",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "kubelet_running_pod_count",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_instance_samples_discarded_per_second",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "namespace_cpu:kube_pod_container_resource_limits:sum",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "kubelet_volume_stats_inodes",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "kubelet_running_container_count",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_instance_samples_per_second",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_org_traces_included_usage",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_org_logs_usage",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_instance_active_datadog_series",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "kubelet_volume_stats_available_bytes",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_instance_active_integration_series",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "namespace_workload_pod",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "kubelet_node_config_error",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_logs_instance_samples_discarded_per_second",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_traces_instance_info",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_org_logs_included_usage",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "kubelet_volume_stats_inodes_used",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_instance_active_series",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_org_traces_usage",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_org_metrics_included_series",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "kubelet_volume_stats_capacity_bytes",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_logs_instance_info",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_logs_instance_bytes_received_per_second",
+      "count": 0,
+      "job_counts": []
+    },
+    {
+      "metric": "grafanacloud_instance_info",
+      "count": 0,
+      "job_counts": []
+    }
+  ],
+  "additional_metric_counts": [
+    {
+      "metric": "rest_client_rate_limiter_duration_seconds_bucket",
+      "count": 671,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 671
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_docker_operations_duration_seconds_bucket",
+      "count": 372,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 372
+        }
+      ]
+    },
+    {
+      "metric": "container_tasks_state",
+      "count": 360,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 360
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_failures_total",
+      "count": 288,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 288
+        }
+      ]
+    },
+    {
+      "metric": "container_blkio_device_usage_total",
+      "count": 228,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 228
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_http_requests_duration_seconds_bucket",
+      "count": 96,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 96
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_network_plugin_operations_duration_seconds_bucket",
+      "count": 96,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 96
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_status_phase",
+      "count": 90,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 90
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_request_duration_seconds_count",
+      "count": 79,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 79
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_request_duration_seconds_sum",
+      "count": 79,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 79
+        }
+      ]
+    },
+    {
+      "metric": "container_network_transmit_errors_total",
+      "count": 75,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "metric": "container_network_receive_errors_total",
+      "count": 75,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 75
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_mapped_file",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_processes",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_spec_cpu_period",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_swap",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_spec_memory_reservation_limit_bytes",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_usage_bytes",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_max_usage_bytes",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_start_time_seconds",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_spec_memory_limit_bytes",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_cpu_usage_seconds_total",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_cpu_load_average_10s",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_sockets",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_threads_max",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_cpu_system_seconds_total",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_failcnt",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_memory_cache",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_threads",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_file_descriptors",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_cpu_user_seconds_total",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_spec_cpu_shares",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_spec_memory_swap_limit_bytes",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "container_last_seen",
+      "count": 72,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 72
+        }
+      ]
+    },
+    {
+      "metric": "http_request_duration_microseconds_bucket",
+      "count": 70,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 70
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_rate_limiter_duration_seconds_sum",
+      "count": 61,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 61
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_rate_limiter_duration_seconds_count",
+      "count": 61,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 61
+        }
+      ]
+    },
+    {
+      "metric": "kube_secret_metadata_resource_version",
+      "count": 58,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 58
+        }
+      ]
+    },
+    {
+      "metric": "kube_secret_annotations",
+      "count": 58,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 58
+        }
+      ]
+    },
+    {
+      "metric": "kube_secret_info",
+      "count": 58,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 58
+        }
+      ]
+    },
+    {
+      "metric": "kube_secret_type",
+      "count": 58,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 58
+        }
+      ]
+    },
+    {
+      "metric": "kube_secret_labels",
+      "count": 58,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 58
+        }
+      ]
+    },
+    {
+      "metric": "kube_secret_created",
+      "count": 58,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 58
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_status_reason",
+      "count": 54,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 54
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_status_scheduled",
+      "count": 54,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 54
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_status_ready",
+      "count": 54,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 54
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_usage_bytes",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_write_seconds_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_sector_writes_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_inodes_free",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_inodes_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_sector_reads_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_io_time_seconds_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_reads_merged_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_read_seconds_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_limit_bytes",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_io_current",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_writes_merged_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "container_fs_io_time_weighted_seconds_total",
+      "count": 48,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_runtime_operations_duration_seconds_sum",
+      "count": 47,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 47
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_runtime_operations_duration_seconds_count",
+      "count": 47,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 47
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_client_certificate_expiration_seconds_bucket",
+      "count": 45,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 45
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_storage_data_key_generation_duration_seconds_bucket",
+      "count": 45,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 45
+        }
+      ]
+    },
+    {
+      "metric": "container_ulimits_soft",
+      "count": 39,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 39
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_worker_start_duration_seconds_bucket",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_start_duration_seconds_bucket",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "kube_node_status_condition",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_status_condition",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_exec_plugin_certificate_rotation_age_bucket",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "node_namespace_pod_container:container_memory_working_set_bytes",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "node_namespace_pod_container:container_memory_swap",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "cloudprovider_aws_api_request_duration_seconds_bucket",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_run_podsandbox_duration_seconds_bucket",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "node_namespace_pod_container:container_memory_cache",
+      "count": 36,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 36
+        }
+      ]
+    },
+    {
+      "metric": "storage_operation_duration_seconds_sum",
+      "count": 34,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 34
+        }
+      ]
+    },
+    {
+      "metric": "storage_operation_status_count",
+      "count": 34,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 34
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_certificate_manager_server_rotation_seconds_bucket",
+      "count": 33,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 33
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_queue_duration_seconds_bucket",
+      "count": 33,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 33
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_work_duration_seconds_bucket",
+      "count": 33,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 33
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_docker_operations_duration_seconds_count",
+      "count": 31,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 31
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_docker_operations_duration_seconds_sum",
+      "count": 31,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 31
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_docker_operations_total",
+      "count": 31,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 31
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_delegated_authz_request_duration_seconds_bucket",
+      "count": 27,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "metric": "kube_node_status_capacity",
+      "count": 21,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_gc_duration_seconds_bucket",
+      "count": 21,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_status_ready",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_status_terminated",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_configmap_info",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_labels",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_created",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_status_running",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_status_waiting",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_annotations",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_containers_per_pod_count_bucket",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_start_time",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_configmap_created",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_configmap_metadata_resource_version",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_container_log_filesystem_used_bytes",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_status_scheduled_time",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_state_started",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_info",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_status_restarts_total",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_restart_policy",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_container_info",
+      "count": 18,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "metric": "kube_namespace_status_phase",
+      "count": 16,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "metric": "go_gc_duration_seconds",
+      "count": 15,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 15
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_network_plugin_operations_duration_seconds_count",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "scrape_series_added",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_annotations",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_namespace_labels",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "cluster:namespace:pod_cpu:active:kube_pod_container_resource_requests",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_created",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_cgroup_manager_duration_seconds_sum",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_worker_duration_seconds_sum",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_http_requests_total",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_namespace_annotations",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_network_plugin_operations_total",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_labels",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_http_requests_duration_seconds_count",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "scrape_samples_scraped",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_metadata_generation",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_owner",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_spec_replicas",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_status_ready_replicas",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_status_replicas",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_http_inflight_requests",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_status_observed_generation",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "scrape_duration_seconds",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "scrape_samples_post_metric_relabeling",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_heap_space_size_total_bytes",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_http_requests_duration_seconds_sum",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kube_replicaset_status_fully_labeled_replicas",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_heap_space_size_available_bytes",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_network_plugin_operations_duration_seconds_sum",
+      "count": 8,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "metric": "http_request_duration_microseconds_count",
+      "count": 7,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "metric": "http_request_duration_microseconds_sum",
+      "count": 7,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "metric": "machine_nvm_capacity",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_created",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_metadata_generation",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_started_containers_total",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_status_replicas_updated",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_status_replicas",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_labels",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_status_observed_generation",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_status_replicas_ready",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_spec_paused",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_annotations",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_docker_operations_errors_total",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_status_replicas_unavailable",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_spec_replicas",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_status_replicas_available",
+      "count": 6,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "metric": "kube_service_info",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_spec_strategy_rollingupdate_max_surge",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_endpoint_annotations",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_endpoint_created",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_endpoint_address_available",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_endpoint_info",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_deployment_spec_strategy_rollingupdate_max_unavailable",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_service_labels",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_service_created",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_endpoint_address_not_ready",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_endpoint_labels",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_service_spec_type",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "kube_service_annotations",
+      "count": 5,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "metric": "process_max_fds",
+      "count": 4,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "process_virtual_memory_bytes",
+      "count": 4,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "process_open_fds",
+      "count": 4,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "ALERTS",
+      "count": 4,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "ALERTS_FOR_STATE",
+      "count": 4,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        },
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "cloudprovider_aws_api_request_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_frees_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_worker_start_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_run_podsandbox_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubernetes_build_info",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "machine_cpu_sockets",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_init_container_status_ready",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "machine_nvm_avg_power_budget_watts",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "container_scrape_error",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pleg_relist_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_run_podsandbox_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_queue_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_other_sys_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_certificate_manager_server_rotation_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_heap_sys_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_active_handles",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_retries_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_audit_event_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_threads",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_mspan_sys_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_delegated_authz_request_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_stack_sys_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_info",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "cloudprovider_aws_api_request_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_stack_inuse_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_sys_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_delegated_authz_request_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_storage_envelope_transformation_cache_misses_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_init_container_status_waiting",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_exec_plugin_certificate_rotation_age_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_mutatingwebhookconfiguration_info",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_mutatingwebhookconfiguration_metadata_resource_version",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "get_token_fail_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_gc_cpu_fraction",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pleg_discard_events",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_queue_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pleg_relist_interval_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_status_number_ready",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "machine_cpu_physical_cores",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_mutatingwebhookconfiguration_created",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_storage_data_key_generation_failures_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_heap_inuse_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_annotations",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "machine_scrape_error",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_storage_data_key_generation_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_adds_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_init_container_info",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_gc_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_depth",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_work_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_client_certificate_expiration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_heap_alloc_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_mallocs_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_exec_plugin_ttl_seconds",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_server_expiration_renew_errors",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "rest_client_exec_plugin_certificate_rotation_age_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "process_virtual_memory_max_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_node_spec_unschedulable",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_labels",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_started_pods_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_containers_per_pod_count_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_certificate_manager_server_rotation_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_alloc_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_next_gc_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_status_number_unavailable",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_start_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "get_token_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_status_current_number_scheduled",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_longest_running_processor_seconds",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_storage_data_key_generation_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_containers_per_pod_count_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_status_number_available",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_managed_ephemeral_containers",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_init_container_status_terminated_reason",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_envelope_encryption_dek_cache_fill_percent",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_alloc_bytes_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_created",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_certificate_manager_server_ttl_seconds",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "machine_cpu_cores",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "cadvisor_version_info",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/cadvisor",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_node_created",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_status_observed_generation",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_node_annotations",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_node_info",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_heap_released_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_last_gc_time_seconds",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pleg_relist_interval_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_started_pods_errors_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_work_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_mcache_inuse_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_metadata_generation",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pod_worker_start_duration_seconds_sum",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_client_certificate_expiration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_init_container_status_terminated",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_init_container_status_running",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_audit_requests_rejected_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_status_desired_number_scheduled",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_delegated_authz_request_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_gc_duration_seconds_count",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_gc_sys_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_status_updated_number_scheduled",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_mspan_inuse_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_pod_init_container_status_restarts_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_heap_idle_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kubelet_pleg_last_seen_seconds",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_daemonset_status_number_misscheduled",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_heap_objects",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "apiserver_webhooks_x509_missing_san_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_node_labels",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_lookups_total",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_buck_hash_sys_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "go_memstats_mcache_sys_bytes",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "workqueue_unfinished_work_seconds",
+      "count": 3,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kubelet",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "metric": "kube_validatingwebhookconfiguration_info",
+      "count": 2,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "metric": "kube_validatingwebhookconfiguration_metadata_resource_version",
+      "count": 2,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "metric": "kube_validatingwebhookconfiguration_created",
+      "count": 2,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "metric": "cluster:namespace:pod_memory:active:kube_pod_container_resource_limits",
+      "count": 2,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "metric": "cluster:namespace:pod_memory:active:kube_pod_container_resource_requests",
+      "count": 2,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "metric": "kube_ingress_path",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_ingress_metadata_resource_version",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_eventloop_lag_p90_seconds",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_storageclass_labels",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_storageclass_annotations",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_ingress_info",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "process_heap_bytes",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_eventloop_lag_mean_seconds",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_eventloop_lag_stddev_seconds",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_ingress_labels",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_eventloop_lag_max_seconds",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_storageclass_info",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_ingress_created",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_ingress_annotations",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "kube_storageclass_created",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/kubernetes/kube-state-metrics",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "metric": "nodejs_eventloop_lag_min_seconds",
+      "count": 1,
+      "job_counts": [
+        {
+          "job": "integrations/nodejs",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}
